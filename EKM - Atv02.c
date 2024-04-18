@@ -1,4 +1,7 @@
-//EKM - Calcule o IMC
+//EKM - Atividade 02
+//Enzo Kato Mootooka - 18/04/2024
+/*Calcular o IMC, baseado no peso (kg) e altura (metros), além disso estabelecer limites que classificam o IMC da pessoa entre as categorias de: PESO BAIXO, PESO NORMAL, SOBREPESO, OBESIDADE DE GRAU I, II OU 3.
+*/
 
 
 #include <stdio.h>
