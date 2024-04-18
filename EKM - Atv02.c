@@ -29,7 +29,7 @@ int main() {
         imc = peso / (altura * altura);
 
         // Classifica o IMC
-        printf("Seu IMC é: %.2f\n", imc);
+        printf("Seu IMC e: %.2f\n", imc);
         if (imc < 18.5) {
             printf("Classificacao: Peso Baixo\n");
         } else if (imc >= 18.5 && imc < 24.9) {
@@ -47,7 +47,7 @@ int main() {
         // Calcula o peso ideal com base na altura
         pesoIdealMin = 18.5 * (altura * altura);
         pesoIdealMax = 24.9 * (altura * altura);
-        printf("Peso ideal - Minimo e Maximo (em kg): Entre %.2f e %.2f\n", pesoIdealMin, pesoIdealMax);
+        printf("Peso ideal (em kg): Entre %.2f e %.2f\n", pesoIdealMin, pesoIdealMax);
 
         // Pergunta se deseja recalcular
         printf("Deseja recalcular? (S/N): ");
