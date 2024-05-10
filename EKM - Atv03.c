@@ -1,40 +1,44 @@
-//EKM 10/05/2024
+//Enzo Kato Motooka - Atividade 03
+//EKM - 10/05/2024
+/*Solicitar uma data no formato DD/MM/AAAA, e calcular a quantidade de dias completos j√° decorridos desde o in√≠cio desse ano
+at√© essa data especificada (inclusive), a quantidade de dias que ainda faltam at√© o final do ano em quest√£o e a quantidade total de dias do ano em quest√£o (deve ser a soma das 2
+respostas anteriores) */
 
 #include <stdio.h>
 
-// FunÁ„o para verificar se o ano È bissexto
+// Fun√ß√£o para verificar se o ano √© bissexto
 int fAnoBissexto(int a) {
     return (a % 4 == 0 && a % 100 != 0) || (a % 400 == 0);
 }
 
-// FunÁ„o para verificar se uma data È v·lida
+// Fun√ß√£o para verificar se uma data √© v√°lida
 int fDataValida(int d, int m, int a) {
     if (a < 1600 || a > 5000 || m < 1 || m > 12 || d < 1 || d > 31) {
-        return 0; // Data inv·lida
+        return 0; // Data inv√°lida
     }
 
     // Verifica os meses com 30 ou 31 dias
     if ((m == 4 || m == 6 || m == 9 || m == 11) && d > 30) {
-        return 0; // Data inv·lida
+        return 0; // Data inv√°lida
     }
 
     // Verifica fevereiro
     if (m == 2) {
         if (fAnoBissexto(a)) {
             if (d > 29) {
-                return 0; // Data inv·lida
+                return 0; // Data inv√°lida
             }
         } else {
             if (d > 28) {
-                return 0; // Data inv·lida
+                return 0; // Data inv√°lida
             }
         }
     }
 
-    return 1; // Data v·lida
+    return 1; // Data v√°lida
 }
 
-// FunÁ„o para calcular a quantidade de dias desde o inÌcio do ano atÈ a data
+// Fun√ß√£o para calcular a quantidade de dias desde o in√≠cio do ano at√© a data
 int fDiasInicioAno(int d, int m, int a) {
     int diasPorMes[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     int totalDias = 0;
@@ -52,7 +56,7 @@ int fDiasInicioAno(int d, int m, int a) {
     return totalDias;
 }
 
-// FunÁ„o para calcular a quantidade de dias que faltam para o fim do ano
+// Fun√ß√£o para calcular a quantidade de dias que faltam para o fim do ano
 int fDiasFimAno(int d, int m, int a) {
     int diasPorMes[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     int totalDias = 0;
